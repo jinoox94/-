@@ -1,0 +1,969 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>도드람양돈농협 프로젝트 완전 분석 보고서</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap');
+        body { font-family: 'Noto Sans KR', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        .progress-bar { transition: width 1s ease-in-out; }
+        .section-divider { border-top: 3px solid #e5e7eb; margin: 2rem 0; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h1 class="text-4xl font-bold mb-2">도드람양돈농협 프로젝트 완전 분석 보고서</h1>
+                    <p class="text-xl opacity-90">종합 기업 분석 및 영업 전략 가이드</p>
+                </div>
+                <div class="text-right">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-4">
+                        <div class="text-2xl font-bold">❤️ Warm Lead</div>
+                        <div class="text-lg">ICP 스코어: 55/100</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Executive Summary -->
+    <section class="py-12">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-chart-line text-blue-600 mr-3"></i>
+                    Executive Summary
+                </h2>
+                
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-gradient-to-r from-yellow-400 to-yellow-600 text-white p-6 rounded-lg">
+                        <div class="text-3xl font-bold">55점</div>
+                        <div class="text-lg">ICP 스코어</div>
+                    </div>
+                    <div class="bg-gradient-to-r from-orange-400 to-orange-600 text-white p-6 rounded-lg">
+                        <div class="text-3xl font-bold">❤️ Warm</div>
+                        <div class="text-lg">리드 분류</div>
+                    </div>
+                    <div class="bg-gradient-to-r from-purple-400 to-purple-600 text-white p-6 rounded-lg">
+                        <div class="text-3xl font-bold">45%</div>
+                        <div class="text-lg">기회 전환율</div>
+                    </div>
+                </div>
+
+                <div class="bg-orange-50 border-l-4 border-orange-400 p-6 mb-6">
+                    <h3 class="text-xl font-semibold text-orange-800 mb-3">핵심 결론</h3>
+                    <ul class="text-orange-700 space-y-2">
+                        <li><i class="fas fa-check-circle mr-2"></i><strong>안정적 대기업</strong>: 매출 1조원, 경상이익 62억원의 농축산업계 최대 기업</li>
+                        <li><i class="fas fa-check-circle mr-2"></i><strong>이커머스 니즈</strong>: 도드람몰 고도몰 솔루션 리뉴얼 계획 중, 내년도 예산 확보 단계</li>
+                        <li><i class="fas fa-check-circle mr-2"></i><strong>브랜드 가치</strong>: 5년 연속 올해의 브랜드 대상, SSG 랜더스 5년 스폰서십</li>
+                        <li><i class="fas fa-check-circle mr-2"></i><strong>예상 규모</strong>: 5,000-8,000만원 규모 이커머스 고도화 프로젝트</li>
+                    </ul>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <h4 class="text-lg font-semibold text-green-700 mb-3">주요 기회 요인</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• 농축산업계 1위 안정적 재무 구조</li>
+                            <li>• 고도몰 리뉴얼 계획 확정</li>
+                            <li>• 내년도 예산 확보 진행 중</li>
+                            <li>• 강력한 브랜드 파워</li>
+                            <li>• 디지털 전환 필요성 증대</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-semibold text-orange-700 mb-3">주요 리스크 요인</h4>
+                        <ul class="text-gray-700 space-y-1">
+                            <li>• 농협 조직의 보수적 의사결정</li>
+                            <li>• 복잡한 승인 프로세스</li>
+                            <li>• 내부 개발팀 보유</li>
+                            <li>• 농축산업 특성상 IT 우선순위</li>
+                            <li>• 장기 프로젝트 선호</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 기업 기본 정보 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-building text-blue-600 mr-3"></i>
+                    기업 기본 정보
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <div class="space-y-4">
+                            <div class="flex justify-between py-3 border-b">
+                                <span class="font-semibold text-gray-600">조합명</span>
+                                <span class="text-gray-800">도드람양돈농협 (DODRAM)</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b">
+                                <span class="font-semibold text-gray-600">설립일</span>
+                                <span class="text-gray-800">1992년 11월 2일 (업력 33년차)</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b">
+                                <span class="font-semibold text-gray-600">조합장</span>
+                                <span class="text-gray-800">박광욱</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b">
+                                <span class="font-semibold text-gray-600">매출액</span>
+                                <span class="text-green-600 font-bold">1조 213억원 (2023년)</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b">
+                                <span class="font-semibold text-gray-600">경상이익</span>
+                                <span class="text-blue-600 font-bold">62억 8,800만원 (2024년, 39.6% 증가)</span>
+                            </div>
+                            <div class="flex justify-between py-3 border-b">
+                                <span class="font-semibold text-gray-600">기업형태</span>
+                                <span class="text-gray-800">농업협동조합 (대기업급)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">주요 사업 영역</h3>
+                        <div class="space-y-3">
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-red-800">한돈 생산 & 유통</h4>
+                                <p class="text-red-600 text-sm">양돈 농가 조직화, 생산에서 유통까지 계열화</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-blue-800">도드람몰 이커머스</h4>
+                                <p class="text-blue-600 text-sm">온라인 직판, B2C 이커머스 플랫폼</p>
+                            </div>
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-green-800">사료 제조 & 판매</h4>
+                                <p class="text-green-600 text-sm">65만톤 역대 최대 판매 실적 (2024년)</p>
+                            </div>
+                            <div class="bg-purple-50 p-4 rounded-lg">
+                                <h4 class="font-semibold text-purple-800">금융 & 종합 서비스</h4>
+                                <p class="text-purple-600 text-sm">조합원 금융, 기술 컨설팅, 종합 지원</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5개 항목 상세 분석 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-list-check text-blue-600 mr-3"></i>
+                    5개 항목 상세 분석
+                </h2>
+
+                <div class="space-y-8">
+                    <!-- 1. 기업 기본정보 -->
+                    <div class="border-l-4 border-blue-500 pl-6">
+                        <h3 class="text-xl font-semibold text-blue-800 mb-3">1. 기업 기본정보 (매출액, 임직원 수)</h3>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <p class="text-blue-800"><strong>매출액:</strong> 1조 213억원 (2023년) - 농축산업계 최대 규모</p>
+                            <p class="text-blue-800"><strong>경상이익:</strong> 62억 8,800만원 (2024년, 전년 대비 39.6% 증가)</p>
+                            <p class="text-blue-800"><strong>사업 규모:</strong> 내년도 4조 6,485억원 규모 (경제사업 2.2조 + 금융사업 2.2조)</p>
+                            <p class="text-blue-800"><strong>특징:</strong> 한국 최대 양돈 농협, 안정적 성장세</p>
+                        </div>
+                    </div>
+
+                    <!-- 2. 기업 추가정보 -->
+                    <div class="border-l-4 border-green-500 pl-6">
+                        <h3 class="text-xl font-semibold text-green-800 mb-3">2. 기업 추가정보 (사업 목적, 방향성, 상황 분석)</h3>
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <p class="text-green-800 mb-2"><strong>비전 2030:</strong> 2030년 시장 점유율 12% 달성 목표</p>
+                            <p class="text-green-800 mb-2"><strong>최근 방향성:</strong></p>
+                            <ul class="text-green-700 ml-4 space-y-1">
+                                <li>• 디지털 전환 가속화 (도드람몰 고도화)</li>
+                                <li>• 브랜드 마케팅 강화 (SSG 랜더스 5년 스폰서십)</li>
+                                <li>• 사료사업 확장 (65만톤 역대 최대 실적)</li>
+                                <li>• 조합원 배당금 30억원 지급 (2025년)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3. 홈페이지 정보 -->
+                    <div class="border-l-4 border-purple-500 pl-6">
+                        <h3 class="text-xl font-semibold text-purple-800 mb-3">3. 홈페이지 정보 (리뉴얼 주기, 목적)</h3>
+                        <div class="bg-purple-50 p-4 rounded-lg">
+                            <p class="text-purple-800"><strong>도드람 공식사이트:</strong> https://dodram.nonghyup.com/</p>
+                            <p class="text-purple-800"><strong>도드람몰:</strong> https://www.dodrammall.com/ (고도몰 솔루션 기반)</p>
+                            <p class="text-purple-800"><strong>리뉴얼 계획:</strong> 2025년 고도몰 솔루션 고도화 예정</p>
+                            <p class="text-purple-800"><strong>목적:</strong> 이커머스 경쟁력 강화, 고객 경험 개선, 매출 증대</p>
+                        </div>
+                    </div>
+
+                    <!-- 4. 이전 제작사 정보 -->
+                    <div class="border-l-4 border-yellow-500 pl-6">
+                        <h3 class="text-xl font-semibold text-yellow-800 mb-3">4. 이전 제작사 정보 / 운영유지관리 계약 이력</h3>
+                        <div class="bg-yellow-50 p-4 rounded-lg">
+                            <p class="text-yellow-800"><strong>현재 솔루션:</strong> 고도몰 (GODO MALL) 이커머스 플랫폼</p>
+                            <p class="text-yellow-800"><strong>리뉴얼 상황:</strong> 내년도 예산 확보를 위한 사전 컨설팅 단계</p>
+                            <p class="text-yellow-800"><strong>예산 규모:</strong> 추정 5,000-8,000만원 (이커머스 고도화 프로젝트)</p>
+                            <p class="text-yellow-800"><strong>결정 시기:</strong> 2025년 하반기 예산 확정 후 진행 예정</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. 담당팀 및 담당자 정보 -->
+                    <div class="border-l-4 border-red-500 pl-6">
+                        <h3 class="text-xl font-semibold text-red-800 mb-3">5. 담당팀 및 담당자 정보 (의사결정권자)</h3>
+                        <div class="bg-red-50 p-4 rounded-lg">
+                            <p class="text-red-800"><strong>최종 결정권자:</strong> 박광욱 조합장</p>
+                            <p class="text-red-800"><strong>조직 구조:</strong> 농협 조직, 대의원회 의결 필요</p>
+                            <p class="text-red-800"><strong>의사결정 프로세스:</strong> 담당부서 → 경영진 → 대의원회 승인</p>
+                            <p class="text-red-800"><strong>특징:</strong> 신중한 의사결정, 안정성 중시, 장기적 관점</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BANT 분석 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-crosshairs text-blue-600 mr-3"></i>
+                    BANT 분석
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="space-y-6">
+                        <!-- Budget -->
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-green-800 mb-3 flex items-center">
+                                <i class="fas fa-dollar-sign mr-2"></i>Budget (예산)
+                            </h3>
+                            <div class="space-y-2">
+                                <p class="text-green-700"><strong>추정 예산:</strong> 5,000-8,000만원</p>
+                                <p class="text-green-700"><strong>예산 근거:</strong> 매출 1조원, 이커머스 고도화 프로젝트</p>
+                                <p class="text-green-700"><strong>예산 상황:</strong> 내년도 예산 확보 진행 중</p>
+                                <div class="bg-green-100 p-3 rounded mt-3">
+                                    <p class="text-green-800 text-sm"><strong>평가:</strong> 충분한 예산 확보 가능</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Authority -->
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-blue-800 mb-3 flex items-center">
+                                <i class="fas fa-user-tie mr-2"></i>Authority (권한)
+                            </h3>
+                            <div class="space-y-2">
+                                <p class="text-blue-700"><strong>최종 결정권자:</strong> 박광욱 조합장</p>
+                                <p class="text-blue-700"><strong>승인 프로세스:</strong> 대의원회 의결 필요</p>
+                                <p class="text-blue-700"><strong>의사결정 특성:</strong> 신중한 검토, 안정성 중시</p>
+                                <div class="bg-blue-100 p-3 rounded mt-3">
+                                    <p class="text-blue-800 text-sm"><strong>평가:</strong> 복잡하지만 명확한 의사결정 구조</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Need -->
+                        <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-yellow-800 mb-3 flex items-center">
+                                <i class="fas fa-exclamation-triangle mr-2"></i>Need (필요성)
+                            </h3>
+                            <div class="space-y-2">
+                                <p class="text-yellow-700"><strong>수준:</strong> 보통</p>
+                                <p class="text-yellow-700"><strong>필요성:</strong></p>
+                                <ul class="text-yellow-600 ml-4 text-sm space-y-1">
+                                    <li>• 고도몰 솔루션 고도화</li>
+                                    <li>• 이커머스 경쟁력 강화</li>
+                                    <li>• 고객 경험 개선</li>
+                                    <li>• 매출 증대 방안</li>
+                                </ul>
+                                <div class="bg-yellow-100 p-3 rounded mt-3">
+                                    <p class="text-yellow-800 text-sm"><strong>평가:</strong> 확실한 니즈, 시급성 보통</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Timing -->
+                        <div class="bg-purple-50 border border-purple-200 rounded-lg p-6">
+                            <h3 class="text-lg font-semibold text-purple-800 mb-3 flex items-center">
+                                <i class="fas fa-clock mr-2"></i>Timing (시기)
+                            </h3>
+                            <div class="space-y-2">
+                                <p class="text-purple-700"><strong>적절한 시기:</strong> 2025년 하반기</p>
+                                <p class="text-purple-700"><strong>시기 근거:</strong></p>
+                                <ul class="text-purple-600 ml-4 text-sm space-y-1">
+                                    <li>• 내년도 예산 확보 진행 중</li>
+                                    <li>• 사전 컨설팅 단계</li>
+                                    <li>• 안정적 성장세 지속</li>
+                                    <li>• 디지털 전환 필요성 증대</li>
+                                </ul>
+                                <div class="bg-purple-100 p-3 rounded mt-3">
+                                    <p class="text-purple-800 text-sm"><strong>평가:</strong> 적절한 타이밍</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ICP 평가 상세 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-chart-bar text-blue-600 mr-3"></i>
+                    ICP 평가 상세
+                </h2>
+
+                <div class="mb-8">
+                    <div class="bg-gradient-to-r from-yellow-500 to-yellow-600 text-white p-6 rounded-lg text-center">
+                        <div class="text-4xl font-bold mb-2">55점 / 100점</div>
+                        <div class="text-xl">ICP 부합률: 55% (Warm Lead)</div>
+                        <div class="text-lg mt-2">❤️ Warm Lead - 관심 고객</div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">항목별 상세 점수</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">1. 기업 규모</span>
+                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">15/20점</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">2. 산업군 적합도</span>
+                                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">8/15점</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">3. 예산 타당성</span>
+                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">10/15점</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">4. 디지털 니즈</span>
+                                <span class="bg-green-500 text-white px-3 py-1 rounded-full text-sm">10/15점</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">5. 의사결정 구조</span>
+                                <span class="bg-yellow-500 text-white px-3 py-1 rounded-full text-sm">7/15점</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">6. 협업 경험</span>
+                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">3/10점</span>
+                            </div>
+                            <div class="flex justify-between items-center p-3 bg-gray-50 rounded">
+                                <span class="font-medium">7. 장기 협업</span>
+                                <span class="bg-red-500 text-white px-3 py-1 rounded-full text-sm">2/10점</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">리드 분류 체계</h3>
+                        <div class="space-y-4">
+                            <div class="bg-red-50 border border-red-200 p-4 rounded-lg opacity-50">
+                                <h4 class="font-semibold text-red-800 flex items-center">
+                                    <i class="fas fa-fire mr-2"></i>Hot Lead (50% 이상)
+                                </h4>
+                                <p class="text-red-700 text-sm mt-2">예산/타이밍/요구사항 명확, 전환율 70%</p>
+                            </div>
+                            <div class="bg-orange-50 border border-orange-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-orange-800 flex items-center">
+                                    <i class="fas fa-heart mr-2"></i>Warm Lead (30-50%)
+                                </h4>
+                                <p class="text-orange-700 text-sm mt-2">관심도 있지만 즉시 전환 가능성 낮음</p>
+                                <div class="bg-orange-100 p-2 rounded mt-2">
+                                    <p class="text-orange-800 font-semibold">✅ 도드람양돈농협 현재 상태 (55%)</p>
+                                </div>
+                            </div>
+                            <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg opacity-50">
+                                <h4 class="font-semibold text-blue-800 flex items-center">
+                                    <i class="fas fa-snowflake mr-2"></i>Cold Lead (30% 미만)
+                                </h4>
+                                <p class="text-blue-700 text-sm mt-2">요구사항 미정, 장기 육성 필요</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">점수 분석</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-green-50 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-green-800 mb-3">강점 분석</h4>
+                            <ul class="text-green-700 space-y-1 text-sm">
+                                <li>• 매출 1조원 안정적 대기업</li>
+                                <li>• 고도몰 리뉴얼 계획 확정</li>
+                                <li>• 충분한 예산 확보 가능</li>
+                                <li>• 강력한 브랜드 파워</li>
+                                <li>• 이커머스 니즈 명확</li>
+                                <li>• 내년도 예산 확보 진행 중</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">Warm Lead 대응 전략</h4>
+                            <ul class="text-blue-700 space-y-1 text-sm">
+                                <li>• 장기 관계 구축 중심 접근</li>
+                                <li>• 농축산업 특화 솔루션 제안</li>
+                                <li>• 이커머스 고도화 포인트 강조</li>
+                                <li>• 사전 컨설팅 단계 활용</li>
+                                <li>• 브랜드 가치 향상 기여</li>
+                                <li>• 안정성과 신뢰성 강조</li>
+                                <li>• 예산 확보 시점 모니터링</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 최신 뉴스/보도자료 요약 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-newspaper text-blue-600 mr-3"></i>
+                    최신 뉴스 & 보도자료 요약
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">주요 성과 (2024-2025)</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 border-l-4 border-green-500 p-4">
+                                <h4 class="font-semibold text-green-800">
+                                    <a href="http://www.pigpeople.net/news/article.html?no=16638" target="_blank" class="hover:underline">
+                                        2025년 정기대의원회 개최, 조합원 30억 배당
+                                    </a>
+                                </h4>
+                                <p class="text-green-700 text-sm">2024년 경상이익 62억 8,800만원 달성 (전년비 39.6% 증가)</p>
+                                <span class="text-xs text-green-600">2025.03.05</span>
+                            </div>
+                            <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
+                                <h4 class="font-semibold text-blue-800">
+                                    <a href="http://www.pigpeople.net/news/article.html?no=15639" target="_blank" class="hover:underline">
+                                        5년 연속 '올해의 브랜드 대상' 수상
+                                    </a>
+                                </h4>
+                                <p class="text-blue-700 text-sm">2024 올해의 브랜드 대상 돈육 부문 5년 연속 1위</p>
+                                <span class="text-xs text-blue-600">2024.09.05</span>
+                            </div>
+                            <div class="bg-purple-50 border-l-4 border-purple-500 p-4">
+                                <h4 class="font-semibold text-purple-800">
+                                    <a href="http://www.pigpeople.net/news/article.html?no=16709" target="_blank" class="hover:underline">
+                                        SSG랜더스와 2025시즌 스폰서십 5년째 동행
+                                    </a>
+                                </h4>
+                                <p class="text-purple-700 text-sm">프로야구 스폰서십 5년 연속 계약으로 브랜드 마케팅 강화</p>
+                                <span class="text-xs text-purple-600">2025.03.17</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">사업 확장 동향</h3>
+                        <div class="space-y-4">
+                            <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+                                <h4 class="font-semibold text-yellow-800">
+                                    <a href="https://www.nongmin.com/article/20250428500456" target="_blank" class="hover:underline">
+                                        사료사업 역대 최대 실적 달성
+                                    </a>
+                                </h4>
+                                <p class="text-yellow-700 text-sm">2024년 65만톤 판매로 1990년 창립 이래 최고 기록</p>
+                                <span class="text-xs text-yellow-600">2025.04.28</span>
+                            </div>
+                            <div class="bg-red-50 border-l-4 border-red-500 p-4">
+                                <h4 class="font-semibold text-red-800">
+                                    <a href="https://www.chuksannews.co.kr/mobile/article.html?no=263473" target="_blank" class="hover:underline">
+                                        내년 사업규모 4조 6천억원
+                                    </a>
+                                </h4>
+                                <p class="text-red-700 text-sm">경제사업 2.2조 + 금융사업 2.2조 = 총 4조 6,485억원</p>
+                                <span class="text-xs text-red-600">2024.11.13</span>
+                            </div>
+                            <div class="bg-indigo-50 border-l-4 border-indigo-500 p-4">
+                                <h4 class="font-semibold text-indigo-800">
+                                    <a href="https://www.foodtoday.or.kr/news/article.html?no=195441" target="_blank" class="hover:underline">
+                                        2025 기술자료집 발간
+                                    </a>
+                                </h4>
+                                <p class="text-indigo-700 text-sm">조합원 맞춤 컨설팅 총정리 종합 보고서 발간</p>
+                                <span class="text-xs text-indigo-600">2025.06.27</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-gray-50 p-6 rounded-lg">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-3">영업 기회 분석</h3>
+                    <div class="grid md:grid-cols-3 gap-4">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-3xl text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">안정적 성장</h4>
+                            <p class="text-gray-600 text-sm">5년 연속 브랜드 대상, 39.6% 이익 증가</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-shopping-cart text-3xl text-green-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">이커머스 니즈</h4>
+                            <p class="text-gray-600 text-sm">도드람몰 고도몰 솔루션 리뉴얼 계획</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-dollar-sign text-3xl text-purple-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">예산 확보</h4>
+                            <p class="text-gray-600 text-sm">내년도 예산 확보 진행, 사전 컨설팅 단계</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 미팅 전략 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-handshake text-blue-600 mr-3"></i>
+                    미팅 전략
+                </h2>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">Warm Lead 대응 전략</h3>
+                        <div class="space-y-4">
+                            <div class="bg-orange-50 border border-orange-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-orange-800 mb-2">🎯 핵심 메시지</h4>
+                                <p class="text-orange-700">"도드람의 브랜드 가치를 극대화하는 프리미엄 이커머스 플랫폼"</p>
+                            </div>
+                            <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-blue-800 mb-2">🏆 차별화 포인트</h4>
+                                <ul class="text-blue-700 text-sm space-y-1">
+                                    <li>• 농축산업 이커머스 전문 경험</li>
+                                    <li>• 고도몰 솔루션 고도화 전문성</li>
+                                    <li>• 브랜드 가치 향상 중심 설계</li>
+                                    <li>• 안정성과 확장성 보장</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-4">미팅 구성 및 준비</h3>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-green-800 mb-2">👥 미팅 참석자</h4>
+                                <ul class="text-green-700 text-sm space-y-1">
+                                    <li>• 대표: 농축산업 이해도 높은 리더십</li>
+                                    <li>• 이커머스 PM: 고도몰 솔루션 전문가</li>
+                                    <li>• UX 디자이너: 농축산업 특화 경험</li>
+                                    <li>• 개발팀장: 안정적 시스템 구축</li>
+                                    <li>• 운영 컨설턴트: 장기 파트너십</li>
+                                </ul>
+                            </div>
+                            <div class="bg-purple-50 border border-purple-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-purple-800 mb-2">📋 미팅 아젠다</h4>
+                                <ul class="text-purple-700 text-sm space-y-1">
+                                    <li>• 1단계: 도드람 브랜드 가치 및 목표 이해 (20분)</li>
+                                    <li>• 2단계: 이커머스 고도화 전략 제안 (30분)</li>
+                                    <li>• 3단계: 농축산업 특화 기능 소개 (20분)</li>
+                                    <li>• 4단계: 예산 및 일정 논의 (10분)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">예상 질문 및 대응 방안</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="space-y-4">
+                            <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-yellow-800">Q: 농축산업 이커머스 경험이 있나?</h4>
+                                <p class="text-yellow-700 text-sm mt-2">A: 농축산업 특화 이커머스 프로젝트 다수 경험. 고도몰 솔루션 커스터마이징 전문성 보유</p>
+                            </div>
+                            <div class="bg-blue-50 border border-blue-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-blue-800">Q: 기존 고도몰과의 차별화는?</h4>
+                                <p class="text-blue-700 text-sm mt-2">A: 도드람 브랜드 특성에 최적화된 UX/UI. 농축산업 특화 기능 및 관리 시스템 구축</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-green-50 border border-green-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-green-800">Q: 안정성과 확장성은 보장되나?</h4>
+                                <p class="text-green-700 text-sm mt-2">A: 대기업급 트래픽 처리 경험. 단계적 확장 가능한 아키텍처 설계로 안정성 보장</p>
+                            </div>
+                            <div class="bg-purple-50 border border-purple-200 p-4 rounded-lg">
+                                <h4 class="font-semibold text-purple-800">Q: 프로젝트 기간 및 예산은?</h4>
+                                <p class="text-purple-700 text-sm mt-2">A: 6-8개월 개발 기간, 5,000-8,000만원 예산. 단계별 개발로 리스크 최소화</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 액션 플랜 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-tasks text-blue-600 mr-3"></i>
+                    액션 플랜
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-red-50 border border-red-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-red-800 mb-4 flex items-center">
+                            <i class="fas fa-bolt mr-2"></i>즉시 실행 (1-2주)
+                        </h3>
+                        <ul class="text-red-700 space-y-2 text-sm">
+                            <li>✅ 농축산업 이커머스 전담팀 구성</li>
+                            <li>✅ 도드람몰 현황 분석</li>
+                            <li>✅ 고도몰 솔루션 연구</li>
+                            <li>✅ 농축산업 특화 기능 리스트업</li>
+                            <li>✅ 초기 접촉 및 관계 구축</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-yellow-800 mb-4 flex items-center">
+                            <i class="fas fa-clock mr-2"></i>단기 실행 (1-3개월)
+                        </h3>
+                        <ul class="text-yellow-700 space-y-2 text-sm">
+                            <li>📋 농축산업 특화 제안서 작성</li>
+                            <li>🎨 도드람 브랜드 맞춤 시안</li>
+                            <li>💼 이커머스 고도화 전략 수립</li>
+                            <li>📞 담당자 미팅 주선</li>
+                            <li>🔍 사전 컨설팅 서비스 제공</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-6">
+                        <h3 class="text-lg font-semibold text-green-800 mb-4 flex items-center">
+                            <i class="fas fa-trophy mr-2"></i>중장기 목표 (6개월-1년)
+                        </h3>
+                        <ul class="text-green-700 space-y-2 text-sm">
+                            <li>🤝 조합장 직접 미팅</li>
+                            <li>📈 예산 확보 시점 모니터링</li>
+                            <li>💰 정식 제안 및 계약</li>
+                            <li>🚀 이커머스 고도화 프로젝트</li>
+                            <li>🌟 농축산업 레퍼런스 구축</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-blue-50 border border-blue-200 rounded-lg p-6">
+                    <h3 class="text-lg font-semibold text-blue-800 mb-4">성공 KPI 및 측정 지표</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <h4 class="font-medium text-blue-700 mb-2">관계 구축 지표</h4>
+                            <ul class="text-blue-600 text-sm space-y-1">
+                                <li>• 초기 미팅 성사율: 70% 이상</li>
+                                <li>• 사전 컨설팅 수용률: 60% 이상</li>
+                                <li>• 정기 소통 유지: 월 1회 이상</li>
+                                <li>• 예산 확보 시점 파악</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-blue-700 mb-2">사업 성과 지표</h4>
+                            <ul class="text-blue-600 text-sm space-y-1">
+                                <li>• 제안서 제출 기회 확보</li>
+                                <li>• 프로젝트 계약 전환</li>
+                                <li>• 5,000만원 이상 계약 규모</li>
+                                <li>• 농축산업 레퍼런스 확보</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 이커머스 리뉴얼 전략 제안서 -->
+    <section class="py-8">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-lg shadow-lg p-8 mb-8">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                    <i class="fas fa-rocket text-blue-600 mr-3"></i>
+                    이커머스 리뉴얼 전략 제안서
+                </h2>
+
+                <!-- 현황 분석 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">현황 분석</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-gray-800 mb-3">현재 도드람몰 현황</h4>
+                            <ul class="text-gray-700 space-y-2 text-sm">
+                                <li>• <strong>플랫폼:</strong> 고도몰(GODO MALL) 기반</li>
+                                <li>• <strong>주요 상품:</strong> 도드람한돈, 가공식품, 선물세트</li>
+                                <li>• <strong>고객층:</strong> B2C 개인 소비자 중심</li>
+                                <li>• <strong>브랜드:</strong> 5년 연속 올해의 브랜드 대상</li>
+                                <li>• <strong>현재 이슈:</strong> 사용자 경험 개선 필요</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">리뉴얼 추진 배경</h4>
+                            <ul class="text-blue-700 space-y-2 text-sm">
+                                <li>• 내년도 예산 확보를 위한 사전 컨설팅 단계</li>
+                                <li>• 고도몰 솔루션 고도화 계획</li>
+                                <li>• 이커머스 경쟁력 강화 필요</li>
+                                <li>• 브랜드 가치 극대화 방안 모색</li>
+                                <li>• 고객 경험 개선 및 매출 증대</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 전략 방향 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">전략 방향</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-green-50 border border-green-200 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-green-800 mb-3 flex items-center">
+                                <i class="fas fa-crown mr-2"></i>프리미엄 브랜딩
+                            </h4>
+                            <ul class="text-green-700 text-sm space-y-1">
+                                <li>• 5년 연속 브랜드 대상 활용</li>
+                                <li>• 프리미엄 한돈 브랜드 강화</li>
+                                <li>• 신뢰성과 품질 어필</li>
+                                <li>• 스토리텔링 중심 콘텐츠</li>
+                            </ul>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3 flex items-center">
+                                <i class="fas fa-users mr-2"></i>고객 경험 최적화
+                            </h4>
+                            <ul class="text-blue-700 text-sm space-y-1">
+                                <li>• 직관적 상품 탐색 구조</li>
+                                <li>• 개인화 추천 시스템</li>
+                                <li>• 간편 주문 및 결제</li>
+                                <li>• 모바일 최적화</li>
+                            </ul>
+                        </div>
+                        <div class="bg-purple-50 border border-purple-200 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-purple-800 mb-3 flex items-center">
+                                <i class="fas fa-cogs mr-2"></i>기능 고도화
+                            </h4>
+                            <ul class="text-purple-700 text-sm space-y-1">
+                                <li>• 고도몰 플러스 기능 활용</li>
+                                <li>• 재고 관리 시스템 연동</li>
+                                <li>• CRM 고객 관리 강화</li>
+                                <li>• 데이터 분석 대시보드</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 핵심 제안 기능 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">핵심 제안 기능</h3>
+                    <div class="space-y-6">
+                        <div class="bg-red-50 border-l-4 border-red-500 p-6">
+                            <h4 class="text-lg font-semibold text-red-800 mb-3">1. 농축산업 특화 이커머스 기능</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-red-700 text-sm space-y-1">
+                                    <li>• 신선도 보장 시스템 (배송일 선택)</li>
+                                    <li>• 부위별 상품 분류 체계</li>
+                                    <li>• 조리법 가이드 연동</li>
+                                    <li>• 영양 정보 상세 제공</li>
+                                </ul>
+                                <ul class="text-red-700 text-sm space-y-1">
+                                    <li>• 대용량/소용량 주문 시스템</li>
+                                    <li>• 정기 구독 서비스</li>
+                                    <li>• 선물세트 커스터마이징</li>
+                                    <li>• 콜드체인 배송 추적</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-blue-50 border-l-4 border-blue-500 p-6">
+                            <h4 class="text-lg font-semibold text-blue-800 mb-3">2. 브랜드 가치 극대화 기능</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-blue-700 text-sm space-y-1">
+                                    <li>• 농장-식탁 추적 시스템</li>
+                                    <li>• 품질 인증서 제공</li>
+                                    <li>• 도드람 스토리 콘텐츠</li>
+                                    <li>• 조합원 농장 소개</li>
+                                </ul>
+                                <ul class="text-blue-700 text-sm space-y-1">
+                                    <li>• 브랜드 어워드 전시</li>
+                                    <li>• 고객 후기 시스템</li>
+                                    <li>• SNS 연동 마케팅</li>
+                                    <li>• 라이브 커머스 기능</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="bg-green-50 border-l-4 border-green-500 p-6">
+                            <h4 class="text-lg font-semibold text-green-800 mb-3">3. 고도몰 솔루션 고도화</h4>
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <ul class="text-green-700 text-sm space-y-1">
+                                    <li>• 고도몰 플러스 기능 적용</li>
+                                    <li>• 반응형 모바일 최적화</li>
+                                    <li>• 통합 검색 시스템</li>
+                                    <li>• 다중 결제 시스템</li>
+                                </ul>
+                                <ul class="text-green-700 text-sm space-y-1">
+                                    <li>• ERP 시스템 연동</li>
+                                    <li>• 재고 자동 관리</li>
+                                    <li>• 고객 데이터 분석</li>
+                                    <li>• 마케팅 자동화</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 예산 및 일정 -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">예산 및 일정</h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-yellow-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-yellow-800 mb-3">예산 구성 (총 6,000만원)</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-yellow-700">기획 및 디자인</span>
+                                    <span class="text-yellow-800 font-semibold">1,500만원</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-yellow-700">퍼블리싱 및 개발</span>
+                                    <span class="text-yellow-800 font-semibold">2,500만원</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-yellow-700">시스템 연동</span>
+                                    <span class="text-yellow-800 font-semibold">1,000만원</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-yellow-700">테스트 및 런칭</span>
+                                    <span class="text-yellow-800 font-semibold">500만원</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-yellow-700">운영 및 유지보수</span>
+                                    <span class="text-yellow-800 font-semibold">500만원</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-purple-50 p-6 rounded-lg">
+                            <h4 class="text-lg font-semibold text-purple-800 mb-3">개발 일정 (6개월)</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-purple-700">1개월차: 기획 및 분석</span>
+                                    <span class="text-purple-800">요구사항 정의</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-purple-700">2개월차: UX/UI 디자인</span>
+                                    <span class="text-purple-800">화면 설계</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-purple-700">3-4개월차: 개발</span>
+                                    <span class="text-purple-800">프론트/백엔드</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-purple-700">5개월차: 테스트</span>
+                                    <span class="text-purple-800">품질 보증</span>
+                                </div>
+                                <div class="flex justify-between items-center border-b pb-2">
+                                    <span class="text-purple-700">6개월차: 런칭</span>
+                                    <span class="text-purple-800">오픈 및 운영</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 기대 효과 -->
+                <div class="bg-gradient-to-r from-blue-50 to-purple-50 p-6 rounded-lg">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">기대 효과</h3>
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <i class="fas fa-chart-line text-3xl text-blue-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">매출 증대</h4>
+                            <p class="text-gray-600 text-sm">이커머스 최적화로 20% 매출 증가 기대</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-heart text-3xl text-red-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">고객 만족도</h4>
+                            <p class="text-gray-600 text-sm">사용자 경험 개선으로 고객 만족도 향상</p>
+                        </div>
+                        <div class="text-center">
+                            <i class="fas fa-crown text-3xl text-yellow-600 mb-2"></i>
+                            <h4 class="font-semibold text-gray-800">브랜드 강화</h4>
+                            <p class="text-gray-600 text-sm">프리미엄 브랜드 이미지 구축</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold mb-2">도드람양돈농협 프로젝트 완전 분석 보고서</h3>
+                <p class="text-gray-400">도드람양돈농협 영업 전략 가이드 및 이커머스 리뉴얼 제안서</p>
+            </div>
+            <div class="text-gray-400 text-sm">
+                <p>본 보고서는 도드람양돈농협의 영업 활동을 위한 내부 자료입니다.</p>
+                <p class="mt-2">자동 생성일: <span id="currentDate"></span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 현재 날짜 표시
+        document.getElementById('currentDate').textContent = new Date().toLocaleDateString('ko-KR');
+
+        // 부드러운 스크롤 효과
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // 프로그레스 바 애니메이션
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-bar');
+            progressBars.forEach(bar => {
+                const width = bar.getAttribute('data-width');
+                setTimeout(() => {
+                    bar.style.width = width + '%';
+                }, 500);
+            });
+        }
+
+        // 페이지 로드 시 애니메이션 실행
+        window.addEventListener('load', animateProgressBars);
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDkt5eisQV362%2FcCsSE4g31RW0AoHfhhW1gtrkzc3bEfQZa1vN8Z7GZEGNJqhk5ApLVaEX6768g0BUpEfe2WO0uAv5Rmm2jwakhW0IMB2e%2BMxq%2FTePvlZlfN3G%2BrahbLo2mqtKtvNkY%2Bqv7MaxJ4FsVfJDilp0QietcHyQRFNxviW3A7Kn9fNW759eKeYwLgl0BL3amvmtJa94qmkn8ZOucsoDF2FjpMGuAWXpfiYrC41KdjMurHLntyfu%2FFlZyOFcqmsAwk78KoyPE0c6RYkttiUeYGOqixlo5CitbgthWsVEu%2FZRhqFI8ewToe%2FRUSjeZSOQ4gbChSqEUupPJj8GqgozA2Kkam2sI5JtkzNP6ohsV54O6WJx5YYzzZfFurYebQCYk9kY3QaaGT3eVGc07r%2BAm4BgBOAzrEK5Mei5gPOuhQVtkFm5DzIHNniOPAcjI2QHD62%2FcG26VTrQItGwxTr%2BoyZoTM19YimedIoeBys%2FR3%2Br30SaA6m17ChtHVi9i7TdbE2OyMYf%2F9bonJLOss%3D";
+        window.__genspark_locale = "ko-KR";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDkt5eisQV362/cCsSE4g31RW0AoHfhhW1gtrkzc3bEfQZa1vN8Z7GZEGNJqhk5ApLVaEX6768g0BUpEfe2WO0uAv5Rmm2jwakhW0IMB2e+Mxq/TePvlZlfN3G+rahbLo2mqtKtvNkY+qv7MaxJ4FsVfJDilp0QietcHyQRFNxviW3A7Kn9fNW759eKeYwLgl0BL3amvmtJa94qmkn8ZOucsoDF2FjpMGuAWXpfiYrC41KdjMurHLntyfu/FlZyOFcqmsAwk78KoyPE0c6RYkttiUeYGOqixlo5CitbgthWsVEu/ZRhqFI8ewToe/RUSjeZSOQ4gbChSqEUupPJj8GqgozA2Kkam2sI5JtkzNP6ohsV54O6WJx5YYzzZfFurYebQCYk9kY3QaaGT3eVGc07r+Am4BgBOAzrEK5Mei5gPOuhQVtkFm5DzIHNniOPAcjI2QHD62/cG26VTrQItGwxTr+oyZoTM19YimedIoeBys/R3+r30SaA6m17ChtHVi9i7TdbE2OyMYf/9bonJLOss=";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
